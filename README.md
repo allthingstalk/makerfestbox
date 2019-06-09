@@ -15,7 +15,7 @@ The "Box" experiment for Maker Fest, Novi Sad 2019
 - You should now see a button on your pinboard, which we'll later use to open up the box
 
 ### Arduino IDE
-- Download [Arduino IDE](https://www.arduino.cc/en/Main/Software) and open it
+- (If not already installed) Download [Arduino IDE](https://www.arduino.cc/en/Main/Software) and open it
 - Go to *File > Preferences* and in the *Additional Boards Manager URLs* paste "http://arduino.esp8266.com/stable/package_esp8266com_index.json" and click *OK*
 - Go to *Tools > Board > Boards Manager* and search for "esp8266"
 - Install "esp8266 by ESP8266 Community" and *Close*
@@ -27,7 +27,7 @@ The "Box" experiment for Maker Fest, Novi Sad 2019
 ### Hardware
 - Plug in your box via USB
 - Go to *Tools > Board* and select *NodeMCU 1.0 (ESP-12E Module)*
-- Go to *Tools > Port* and select the port to which the box is connected (should be the only one available)
+- Go to *Tools > Port* and select the port to which the box is connected (e.g. ttyUSB0 / COM[number])
 - Go to *Sketch > Upload* and wait for the upload to the board to finish
 - Once done, you can go to *Tools > Serial Monitor* to get info from the box
 

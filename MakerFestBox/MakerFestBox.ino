@@ -6,7 +6,6 @@
 #include <ArduinoJson.h>
 
 const char*     WIFI_SSID          = "";    // WiFi Network Name
-const char*     WIFI_PASSWORD      = "";    // WiFi Network Password
 const char*     MQTT_USER          = "";    // Go to AllThingsTalk Maker > Devices > Your Device > Settings > Authentication > Device Tokens to get yours
 const char*     DEVICE_ID          = "";    // Go to AllThingsTalk Maker > Devices > Your Device > Settings > Authentication > Device ID to get your Device ID
 
@@ -17,7 +16,7 @@ PubSubClient client(wifiClient);
 void setup() {
   Serial.begin(9600);
   Serial.print("Connecting to WiFi");
-  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+  WiFi.begin(WIFI_SSID); // (It would be "WiFi.begin(WIFI_SSID, WIFI_PASSWORD), but the wifi at Maker Fest is open
   while (WiFi.status() != WL_CONNECTED) { delay(500); Serial.print("."); }
   Serial.println();
   Serial.println("WiFi Connected!");
